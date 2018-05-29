@@ -1,0 +1,37 @@
+
+
+left_leaf_set = ["20","15"]
+key_id = "1" 
+nodeID = "30"
+nodeSpace = 100 
+right_leaf_set = ["40", "45", "10"]
+PastryProtocol.NodeActor.in_leaf_set(left_leaf_set,right_leaf_set,key_id,nodeID, nodeSpace)
+
+PastryProtocol.MasterActor.start
+PastryProtocol.NodeActor.start :node1
+PastryProtocol.NodeActor.start :node2
+PastryProtocol.NodeActor.start :node3
+PastryProtocol.NodeActor.start :node4
+PastryProtocol.NodeActor.start :node5
+PastryProtocol.NodeActor.start :node6
+PastryProtocol.NodeActor.start :node7
+PastryProtocol.NodeActor.start :node8
+PastryProtocol.NodeActor.start :node9
+PastryProtocol.NodeActor.start :node10
+PastryProtocol.NodeActor.start :node11
+PastryProtocol.NodeActor.start :node12
+
+PastryProtocol.NodeActor.pastryInit(:node1)
+PastryProtocol.NodeActor.pastryInit(:node2)
+PastryProtocol.NodeActor.pastryInit(:node3)
+PastryProtocol.NodeActor.pastryInit(:node4)
+PastryProtocol.NodeActor.pastryInit(:node5)
+PastryProtocol.NodeActor.pastryInit(:node6)
+PastryProtocol.NodeActor.pastryInit(:node7)
+PastryProtocol.NodeActor.pastryInit(:node8)
+PastryProtocol.NodeActor.pastryInit(:node9)
+PastryProtocol.NodeActor.pastryInit(:node10)
+PastryProtocol.NodeActor.pastryInit(:node11)
+PastryProtocol.NodeActor.pastryInit(:node12)
+
+PastryProtocol.NodeActor.route(:node2, {:forward,0}, {"310223203", :node4})

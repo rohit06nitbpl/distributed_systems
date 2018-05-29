@@ -1,0 +1,37 @@
+
+
+<div id="login-dialog" class="LoginDialog modal-container u-textCenter" style="z-index: 4002; display: block;">
+  <div class="modal modal-large draggable" id="login-dialog-dialog" role="dialog" aria-labelledby="login-dialog-header" style="top: 158px; left: 354px;"><div class="js-first-tabstop" tabindex="0"></div>
+    <div class="LoginDialog-content modal-content" role="document">
+      
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="login-dialog-header">Log in to Twitter</h3>
+      </div>
+      <div class="LoginDialog-body modal-body">
+        <!--
+        <div class="LoginDialog-bird">
+          <span class="Icon Icon--bird Icon--large"></span>
+        </div>
+        -->
+        <div class="LoginDialog-form">
+          <form action="homepage" class="LoginForm js-front-signin" method="post" data-component="dialog" data-element="login">
+          <div class="LoginForm-input LoginForm-username">
+            <input type="text" class="text-input email-input js-signin-email" name="user[username]" autocomplete="username" placeholder="username">
+          </div>
+
+          <div class="LoginForm-input LoginForm-password">
+            <input type="password" class="text-input" name="user[password]" placeholder="Password" autocomplete="current-password">
+          </div>
+          <input type="submit" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Log in">
+        </form>
+        </div>
+      </div>
+      <div class="LoginDialog-footer modal-footer u-textCenter">
+        Don't have an account? <a class="LoginDialog-signupLink" href="http://localhost:4000/signup" rel="noopener">Sign up »</a>
+      </div>
+    </div>
+
+  <div class="js-last-tabstop" tabindex="0"></div></div>
+</div>
+

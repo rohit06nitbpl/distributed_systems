@@ -1,0 +1,9 @@
+{application,pastry_protocol,
+             [{applications,[kernel,stdlib,elixir,logger]},
+              {description,"pastry_protocol"},
+              {modules,['Elixir.PastryProtocol',
+                        'Elixir.PastryProtocol.MasterActor',
+                        'Elixir.PastryProtocol.NodeActor']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]}]}.

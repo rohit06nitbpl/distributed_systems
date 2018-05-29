@@ -1,0 +1,91 @@
+<script> 
+window.userToken = "<%= assigns[:user_token] %>";
+window.appConfig = {
+    onLoad: function(App) {
+      App.connect_ws();
+    }
+  };
+
+</script>
+
+<div class="DashboardProfileCard  module">
+  <hr/>
+  
+  
+  <tr>
+  <span>
+  <div style ="margin-left: 15px;" align="left">
+  <h2 id = "username" >@<%=@username%></h2> 
+  </div>
+  
+  
+  <div align="right" style ="margin-right: 15px;">
+  <form action = "/logout" method = "get">
+  <input class="search-input" type="hidden" name="username" value="<%=@username%>"></input>
+  <input  type="submit" id = "logout" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Logout">
+  
+  </form>
+  </div>
+  </span>
+  </tr>
+  
+  
+  
+  <hr/>
+   <div style ="margin-left: 15px;" align="left">
+  <a href="">Followers </a> <span> <p id="n_follower"></p> </span>
+  </div>
+  </div>
+  
+
+<div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content
+   original-tweet js-original-tweet
+   tweet-has-context
+   has-cards dismissible-content has-content
+   " >
+   <!--<form id="" method="POST" action="" class=""> -->
+   
+    
+
+    <form id="search-form" method="POST" action="/search" class="">
+    
+    <input class="search-input" type="hidden" name="param[username]" value="<%=@username%>"></input>
+    <input class="search-input" type="text" id="search-query" placeholder="Search Twitter" name="param[search-qr]" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1">
+    <input type="submit" id = "search_hit" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Search">
+    
+    </form>
+   
+   
+     
+    
+    
+    <input class="search-input" type="text" id="user_to_follow" placeholder="Follow Users" name="f" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1">
+    <input type="submit" id="follow_user" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Follow"> 
+    
+   
+    
+   
+   
+   <!--</form>-->
+</div>
+
+
+<div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content
+   original-tweet js-original-tweet
+   tweet-has-context
+   has-cards dismissible-content has-content
+   " >
+<!--<form id="" method="" action="" class="">-->
+<!--<div aria-labelledby="tweet-box-home-timeline-label" name="tweet" id="tweet-box-home-timeline" class="tweet-box rich-editor" contenteditable="true"  role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?" data-placeholder-poll-composer-on="Ask a question..." data-placeholder-reply="Tweet your reply" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-4" placeholder="What’s happening?"></div>-->
+
+<input class="search-input" type="text" id="tweet-box-home-timeline" placeholder="What’s happening?" name="f" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1">
+<span> <input id= "send_tweet" type="button"   class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Tweet"> </span>
+<!--</form>-->
+
+</div>
+
+
+<div id = "timeline"> </div>
+
+
+   

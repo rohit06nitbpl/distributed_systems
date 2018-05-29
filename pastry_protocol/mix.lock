@@ -1,0 +1,5 @@
+%{"array": {:hex, :array, "1.0.1", "c0ae92d35e891e56f80b605b77c2dba6972302f7716719eee0b5417162c695b0", [], [], "hexpm"},
+  "exactor": {:git, "https://github.com/sasa1977/exactor.git", "ee4397b22c927d5d70b1b6995fcc1f5afb0f6f28", []},
+  "gproc": {:hex, :gproc, "0.5.0", "2df2d886f8f8a7b81a4b04aa17972b5965bbc5bf0100ea6d8e8ac6a0e7389afe", [], [], "hexpm"},
+  "red_black_tree": {:hex, :red_black_tree, "1.2.0", "710776dc25a6f7a9cf19bc1fa15c2587fce6af180cb70a4ed0b1e6af93c1eb29", [:mix], [], "hexpm"},
+  "sorted_set": {:hex, :sorted_set, "1.1.0", "b275f4021cbb2f82965422e1686c70efff03977d74ee5097522231881b7d93c5", [], [{:red_black_tree, "~> 1.2", [hex: :red_black_tree, repo: "hexpm", optional: false]}], "hexpm"}}

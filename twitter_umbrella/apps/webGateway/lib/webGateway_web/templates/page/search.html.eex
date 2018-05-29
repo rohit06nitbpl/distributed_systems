@@ -1,0 +1,43 @@
+<!--<script> 
+window.userToken = "<%= assigns[:user_token] %>";
+window.appConfig = {
+    onLoad: function(App) {
+      App.anotherPage();
+    }
+  };
+
+</script>-->
+
+<div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content
+   original-tweet js-original-tweet
+   tweet-has-context
+   has-cards dismissible-content has-content
+   " >
+   <!--<form id="" method="POST" action="" class=""> -->
+   <tr>
+   <form action = "/homepage" method = "POST">
+
+   <!--<input type="submit" id="back_from_search" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Timeline">-->
+   </form>
+   </tr>
+   <tr>
+    
+    <th>
+    <form id="search-form" method="POST" action="/search" >
+    
+    <input class="search-input" type="text" id="search-query" placeholder="Search Twitter" name="param[search-qr]" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1"></input>
+    <input class="search-input" type="hidden" name="param[username]" value="<%=@username%>"></input>
+    <span> <input type="submit" id = "search-hit" class="EdgeButton EdgeButton--primary EdgeButton--medium submit js-submit" value="Search"> </span>
+    </form>
+    
+
+    
+    </th> 
+  </tr>
+   
+   
+   <!--</form>-->
+</div>
+
+<div id = "search_result"> </div>
+
